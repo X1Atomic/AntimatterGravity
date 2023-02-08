@@ -1,0 +1,399 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14691,        389]
+NotebookOptionsPosition[     14192,        373]
+NotebookOutlinePosition[     14638,        390]
+CellTagsIndexPosition[     14595,        387]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  StyleBox[
+   RowBox[{
+    RowBox[{"CHAPTER", " ", "2"}], " ", "-", " ", 
+    RowBox[{"PRESENT", " ", "STUDY"}]}],
+   FontWeight->"Bold"], 
+  StyleBox["\n",
+   FontWeight->"Bold"]}], "\n", 
+ StyleBox[
+  RowBox[{"2.1", " ", "-", " ", "Theory"}],
+  FontSlant->"Italic"], "\n", 
+ RowBox[{
+  StyleBox["\t",
+   FontSlant->"Italic"], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox[
+       RowBox[{
+        StyleBox["I",
+         FontSlant->"Italic"], "nterference"}]], " ", "--"}], " ", "of", " ", 
+     "one", " ", "and", " ", "two", " ", "grating", " ", "systems", " ", 
+     "highly", " ", "sensitive", " ", 
+     RowBox[{"to", ":", "\n", "\t\t", "Location"}]}], " ", "&"}], " ", 
+   "Orientation", " ", "of", " ", "Gratings"}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+  "Collimation", " ", "and", " ", "Spatial", " ", "Coherence", " ", "of", " ",
+    "Illuminating", " ", "Beam"}], "\n", "\t"}], "\n", 
+ RowBox[{"Appendix", " ", 
+  RowBox[{"A", ".", " ", "Model"}], " ", "for", " ", "partial", " ", 
+  "coherence", " ", "and", " ", "wavefront", " ", "curvature", " ", "in", " ",
+   "grating", " ", "interferometers", " ", 
+  RowBox[{"(", 
+   RowBox[{"McMorran", ",", " ", "2008"}], ")"}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+  "Develops", " ", "an", " ", "understanding", " ", "of", " ", "role", " ", 
+   "of", " ", "spatial", " ", "coherence", " ", "in", " ", "an", " ", 
+   "interferometer"}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+  "Can", " ", "be", " ", "used", " ", "to", " ", "efficiently", " ", "model", 
+   " ", "variety", " ", "of", " ", "interferometers", " ", "with", " ", 
+   "gratings"}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+   RowBox[{
+   "Assumes", " ", "gratings", " ", "illuminated", " ", "by", " ", "Gaussian",
+     " ", "Schell"}], "-", 
+   RowBox[{"model", " ", 
+    RowBox[{"(", "GSM", ")"}], " ", 
+    RowBox[{"beam", ":", "\n", "\t\t", 
+     RowBox[{
+     "A", " ", "particular", " ", "kind", " ", "of", " ", "coherent", " ", 
+      "wave", " ", "field"}]}]}]}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{"Provides", " ", "efficient", " ", "way", " ", "to", " ", 
+   RowBox[{"model", ":", "\n", "\t\t\t", 
+    RowBox[{
+    "1.", " ", "Width", " ", "of", " ", "illuminating", " ", "beam"}]}]}], 
+  " "}], "\n", 
+ RowBox[{"\t\t\t", 
+  RowBox[{"2.", " ", "Its", " ", "spatial", " ", "coherence"}]}], "\n", 
+ RowBox[{"\t\t\t", 
+  RowBox[{
+  "3.", " ", "How", " ", "its", " ", "divergence", " ", "or", " ", 
+   "convergence", " ", "affects", " ", "the", " ", "behaviour", " ", "of", 
+   " ", "the", " ", "interferometer"}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{
+   "An", " ", "appropriate", " ", "model", " ", "for", " ", "real", " ", 
+    "beams", " ", "in", " ", "atom", " ", "and", " ", "electron", " ", 
+    "optics"}], ",", " ", 
+   RowBox[{
+    RowBox[{"as", " ", "discussed", " ", "in", " ", "Appendix", " ", 
+     RowBox[{"B", ".", " ", "Gaussian"}], " ", "Schell", " ", "source", " ", 
+     "as", " ", "model", " ", "for", " ", "slit"}], "-", 
+    RowBox[{
+    "collimated", " ", "atomic", " ", "and", " ", "molecular", " ", "beams", 
+     " ", 
+     RowBox[{"(", 
+      RowBox[{"McMorran", ",", " ", "2008"}], ")"}]}]}]}]}], "\n", 
+ RowBox[{
+  StyleBox["\t\t",
+   FontSlant->"Italic"], 
+  RowBox[{"Main", " ", 
+   RowBox[{"purposes", ":", "\n", "\t\t\t", 
+    RowBox[{
+    "1.", " ", "to", " ", "explain", " ", "how", " ", "a", " ", "GSM", " ", 
+     "beam", " ", "can", " ", "be", " ", "made", " ", "using", " ", "two", 
+     " ", "consecutive", " ", "Gaussian", " ", "slits"}]}]}]}], "\n", 
+ RowBox[{"\t\t\t", 
+  RowBox[{
+  "2.", " ", "to", " ", "quantitatively", " ", "compare", " ", "this", " ", 
+   "arrangement", " ", "to", " ", "atom", " ", "beam", " ", "sources", " ", 
+   "used", " ", "in", " ", "matter", " ", "wave", " ", 
+   "interferometers"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Software", " ", "code", " ", "that", " ", "implements", " ", "theory", 
+    " ", "can", " ", "be", " ", "found", " ", "in", " ", "Appendix", " ", 
+    "L"}], ",", " ", 
+   RowBox[{
+   "used", " ", "to", " ", "generate", " ", "all", " ", "of", " ", "the", " ",
+     "simulations", " ", "of", " ", "interference", " ", "patterns", " ", 
+    "featured", " ", "in", " ", "the", " ", "dissertation"}]}], "\n"}], "\n", 
+
+ RowBox[{
+  StyleBox[
+   RowBox[{"2.2", " ", "-", " ", "Experiments"}],
+   FontSlant->"Italic"], 
+  StyleBox["\n",
+   FontSlant->"Italic"]}], "\n", 
+ RowBox[{
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     StyleBox["Why",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["must",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["the",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["gratings",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["must",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["be",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["coated",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     StyleBox["with",
+      FontSlant->"Italic"], 
+     StyleBox[" ",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["metal",
+       FontSlant->"Italic"], 
+      StyleBox["?",
+       FontSlant->"Italic"], 
+      StyleBox["\n",
+       FontSlant->"Italic"], 
+      StyleBox["\n",
+       FontSlant->"Italic"], "APPENDIX"}], " ", "A"}], " ", "-", " ", 
+    RowBox[{
+    "MODEL", " ", "FOR", " ", "PARTIAL", " ", "COHERENCE", " ", "AND", " ", 
+     "WAVEFRONT", " ", "CURVATURE", " ", "IN", " ", "GRATING", " ", 
+     "INTERFEROMETERS"}]}],
+   FontWeight->"Bold"], 
+  StyleBox["\n",
+   FontWeight->"Bold"]}], "\n", 
+ RowBox[{
+  RowBox[{"If", " ", "optical", " ", "beam", " ", "is", " ", 
+   StyleBox["sufficiently",
+    FontWeight->"Bold"], 
+   StyleBox[" ",
+    FontWeight->"Bold"], 
+   StyleBox["coherent",
+    FontWeight->"Bold"]}], ",", " ", 
+  RowBox[{
+  "then", " ", "downstream", " ", "of", " ", "transmission", " ", "grating", 
+   " ", "on", " ", "finds"}], ",", " ", 
+  RowBox[{"in", " ", 
+   RowBox[{"order", ":", "\n", "\t", 
+    RowBox[{
+    "1.", " ", "Shadow", " ", "of", " ", "grating", " ", "bars"}]}]}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{"2.", " ", "Talbot", " ", "revivals"}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+   RowBox[{"3.", " ", "Far"}], "-", 
+   RowBox[{"field", " ", 
+    RowBox[{"(", "Fraunhoffer", ")"}], " ", "diffraction", " ", 
+    "patterns"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Second", " ", "grating", " ", "can", " ", "be", " ", "added", " ", "to", 
+    " ", "make", " ", "doubly", " ", "diffracted", " ", "beams", " ", 
+    "overlap"}], ",", " ", 
+   RowBox[{
+    RowBox[{"forming", " ", "Mach"}], "-", 
+    RowBox[{"Zehnder", " ", "interferometer"}]}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"If", " ", "optical", " ", "beam", " ", "is", " ", 
+   StyleBox["disordered",
+    FontWeight->"Bold"]}], 
+  StyleBox[",",
+   FontWeight->"Bold"], 
+  StyleBox[" ",
+   FontWeight->"Bold"], 
+  StyleBox[
+   RowBox[{"ie", ".", " ", "incoherent"}],
+   FontWeight->"Bold"], 
+  StyleBox[",",
+   FontWeight->"Bold"], " ", "then"}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"1.", " ", "Talbot", " ", "revivals"}], " ", "&"}], " ", "Far"}],
+    "-", 
+   RowBox[{
+   "field", " ", "diffraction", " ", "pattern", " ", "get", " ", 
+    "blurred"}]}]}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+  "2.", " ", "Interferometer", " ", "paths", " ", "are", " ", "harder", " ", 
+   "to", " ", "isolate"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"In", " ", "general"}], ",", " ", 
+  RowBox[{
+  "to", " ", "analyze", " ", "interference", " ", "phenomena", " ", "one", 
+   " ", "needs", " ", "a", " ", "formalism", " ", "that", " ", "incorporates",
+    " ", 
+   RowBox[{"the", ":", "\n", "\t", 
+    RowBox[{"1.", " ", 
+     RowBox[{"beam", "'"}], "s", " ", "width"}]}]}], ",", "\n", "\t", 
+  RowBox[{"2.", " ", "coherence", " ", "width", " ", 
+   RowBox[{"(", 
+    RowBox[{"transverse", " ", "coherence", " ", "length"}], ")"}]}]}], "\n", 
+
+ RowBox[{"\t", 
+  RowBox[{
+  "3.", " ", "wavefront", " ", "radius", " ", "of", " ", "curvature"}], 
+  StyleBox["\n",
+   FontSlant->"Italic"], "\t"}], "\n", 
+ RowBox[{
+  RowBox[{"In", " ", "paper"}], ",", " ", 
+  RowBox[{
+   RowBox[{"expression", " ", 
+    RowBox[{"derived", " ", "[", 
+     RowBox[{"Eq", ".", " ", "18"}], "]"}]}], ":", "\n", "\n", "\t", 
+   RowBox[{"that", " ", "models"}], ":", "\n", "\t\t", 
+   RowBox[{"1.", " ", "Talbot", " ", "revivals"}]}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{"2.", " ", "Far"}], "-", 
+   RowBox[{"field", " ", "diffraction"}]}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{"3.", " ", "Mach"}], "-", 
+   RowBox[{"Zehnder", " ", "interference", " ", "fringes"}]}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{"4.", " ", "Talbot"}], "-", 
+   RowBox[{"Lau", " ", "interference", " ", "fringes"}]}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+  "5.", " ", "Lau", " ", "interference", " ", "fringes", " ", "for", " ", 
+   "realistic", " ", "beams"}], "\n", "\t"}], "\n", 
+ RowBox[{"\t", 
+  RowBox[{
+  "and", " ", "allows", " ", "for", " ", "beams", " ", "which", " ", 
+   "are"}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{"1.", " ", "Converging"}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{"2.", " ", "Collimated"}]}], "\n", 
+ RowBox[{"\t\t", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"3.", " ", "Diverging"}], " ", "&"}], " ", "arbitrary", " ", 
+   "coherence", " ", "properties"}]}], "\n", 
+ RowBox[{"\t\t"}]}], "Input",
+ CellChangeTimes->{{3.884865599032962*^9, 
+  3.8848655990490837`*^9}},ExpressionUUID->"2051a878-6b86-406c-919e-\
+766fca0bf5dd"],
+
+Cell[BoxData[
+ NamespaceBox["LinguisticAssistant",
+  DynamicModuleBox[{Typeset`query$$ = 
+   "CHAPTER 2 - PRESENT STUDY\n\n2.1 - Theory\n\tInterference -- of one and \
+two grating systems highly sensitive to:\n\t\tLocation & Orientation of \
+Gratings\n\t\tCollimation and Spatial Coherence of Illuminating Beam\n\t\n\
+Appendix A. Model for partial coherence and wavefront curvature in grating \
+interferometers (McMorran, 2008)\n\tDevelops an understanding of role of \
+spatial coherence in an interferometer\n\tCan be used to efficiently model \
+variety of interferometers with gratings\n\tAssumes gratings illuminated by \
+Gaussian Schell-model (GSM) beam:\n\t\tA particular kind of coherent wave \
+field\n\t\tProvides efficient way to model:\n\t\t\t1. Width of illuminating \
+beam \n\t\t\t2. Its spatial coherence\n\t\t\t3. How its divergence or \
+convergence affects the behaviour of the interferometer\n\t\tAn appropriate \
+model for real beams in atom and electron optics, as discussed in Appendix B. \
+Gaussian Schell source as model for slit-collimated atomic and molecular \
+beams (McMorran, 2008)\n\t\tMain purposes:\n\t\t\t1. to explain how a GSM \
+beam can be made using two consecutive Gaussian slits\n\t\t\t2. to \
+quantitatively compare this arrangement to atom beam sources used in matter \
+wave interferometers\nSoftware code that implements theory can be found in \
+Appendix L, used to generate all of the simulations of interference patterns \
+featured in the dissertation\n\n2.2 - Experiments\n\nWhy must the gratings \
+must be coated with metal?\n\nAPPENDIX A - MODEL FOR PARTIAL COHERENCE AND \
+WAVEFRONT CURVATURE IN GRATING INTERFEROMETERS\n\nIf optical beam is \
+sufficiently coherent, then downstream of transmission grating on finds, in \
+order:\n\t1. Shadow of grating bars\n\t2. Talbot revivals\n\t3. Far-field \
+(Fraunhoffer) diffraction patterns\nSecond grating can be added to make \
+doubly diffracted beams overlap, forming Mach-Zehnder interferometer\n\nIf \
+optical beam is disordered, ie. incoherent, then\n\t1. Talbot revivals & \
+Far-field diffraction pattern get blurred\n\t2. Interferometer paths are \
+harder to isolate\n\nIn general, to analyze interference phenomena one needs \
+a formalism that incorporates the:\n\t1. beam's width,\n\t2. coherence width \
+(transverse coherence length)\n\t3. wavefront radius of curvature\n\t\nIn \
+paper, expression derived [Eq. 18]:\n\n\tthat models:\n\t\t1. Talbot revivals\
+\n\t\t2. Far-field diffraction\n\t\t3. Mach-Zehnder interference fringes\n\t\t\
+4. Talbot-Lau interference fringes\n\t\t5. Lau interference fringes for \
+realistic beams\n\t\n\tand allows for beams which are\n\t\t1. Converging\n\t\t\
+2. Collimated\n\t\t3. Diverging & arbitrary coherence properties\n\t\t", 
+   Typeset`boxes$$ = "None", Typeset`allassumptions$$ = {}, 
+   Typeset`assumptions$$ = {}, Typeset`open$$ = {1}, Typeset`querystate$$ = {
+   "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+    0.486558`6.138679611129251, "$TimedOut" -> 4.901704`7.141892075392047, 
+    "Messages" -> {}}}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+      Dynamic[Typeset`query$$], 
+      Dynamic[Typeset`boxes$$], 
+      Dynamic[Typeset`allassumptions$$], 
+      Dynamic[Typeset`assumptions$$], 
+      Dynamic[Typeset`open$$], 
+      Dynamic[Typeset`querystate$$]], StandardForm],
+    ImageSizeCache->{452., {1232.5, 14.5}},
+    TrackedSymbols:>{
+     Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+      Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+   DynamicModuleValues:>{},
+   UndoTrackedVariables:>{Typeset`open$$}],
+  BaseStyle->{"Deploy"},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Input",
+ CellChangeTimes->{
+  3.884865612139454*^9},ExpressionUUID->"97292997-4e15-4eb2-bc52-\
+25709d03e0ea"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{316, Automatic}, {Automatic, 50}},
+TaggingRules->Association["TryRealOnly" -> False],
+FrontEndVersion->"12.3 for Mac OS X ARM (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f8487ca6-bd14-4c8a-8116-baf1b885b3eb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 9760, 286, 1228, "Input",ExpressionUUID->"2051a878-6b86-406c-919e-766fca0bf5dd"],
+Cell[10321, 308, 3867, 63, 1262, "Input",ExpressionUUID->"97292997-4e15-4eb2-bc52-25709d03e0ea"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
