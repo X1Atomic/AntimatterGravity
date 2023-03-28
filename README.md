@@ -1,4 +1,6 @@
-# Antimatter Gravity -- Developing an Antimatter Gravity Interferometer
+# Antimatter Gravity
+
+### Developing an Antimatter Gravity Interferometer
 
 In order to determine the effect of gravity on antimatter, an experiment has been proposed to use a muonium beam, which is produced by passing antimuon particles through superfluid helium, SFHe, then reflecting it through a modified Mach-Zehnder interferometer, to diffract through two gratings in order to make the measurement of the change in height, as a result of gravitational effects, easier, if not possible – the reason for this will be further discussed later, as I update this README.md.
 
