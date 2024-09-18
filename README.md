@@ -11,3 +11,9 @@ The simulation uses a Gaussian-Schell model to represent the beam, as was the mo
 For the grating functions, since periodicity must be implemented, multiple gratings of varying widths will be simulated in a single period to allow for periodicity to be preserved during size variation. However, the aperiodicity of the grating structure reduces the effectiveness of the Fourier series, since not every grating can be modeled through the periodic Fourier expansion. Nonetheless, the use of the Fourier series in the experimental simulation will remain because of the speed at which it can be processed by the code. Additionally, the code allows for independence between GP0, GP1, and GP2, allowing for the intensity distribution to be generated – computed – at any point along the z-axis. This independence also allows for the grating function to be generated without the need for the preceding grating stage.
 
 The importance of measuring the effect of gravity on antimatter, muonium in this experiment, can be seen by the lack of direct experimental confirmation that matter and antimatter behave the same in a gravitational field. While the equivalence principle is commonly assumed to hold true for this interaction, it is becoming of greater interest in the physics community to see asymmetry between antimatter and matter’s behavior in gravity. This is because of its potential to give deeper insight or provide alternatives to topics such as CP violation, dark matter, dark energy, and cosmic inflation to some of the most enigmatic questions of modern physics.
+
+# See My Presentations Here:
+
+https://meetings.aps.org/Meeting/MAR23/Session/G00.44
+
+https://meetings.ams.org/math/jmm2023/meetingapp.cgi/Paper/20707
